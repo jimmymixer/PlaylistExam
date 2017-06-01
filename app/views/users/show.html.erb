@@ -1,0 +1,26 @@
+<a href="/songs/index">Dashboard</a>
+
+<h1><%= @user.first_name %> <%= @user.last_name %>'s Playlist</h1>
+
+<fieldset>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Artist</th>
+        <th>Title</th>
+        <th>Times Added</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @playlist.each do |item| %>
+      <tr>
+        <td><%= item.artist %></td>
+        <td><%= item.title %></td>
+        <td><%= item.song.count %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</fieldset>
